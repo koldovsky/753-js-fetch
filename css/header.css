@@ -1,5 +1,23 @@
+.header {
+    background-color: var(--background-color);
+    padding: 5px;
+}
+
+.header-banner__h1,
+.header-nav__logo {
+    font-size: 56px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-nav__menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .header-nav__menu-item {
-    color: var(--main-text-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -7,10 +25,32 @@
     text-decoration: underline;
 }
 
-.header-nav__menu-item::before {
-    content: "<";
+@media (min-width: 500px) {
+
+    .header-nav {
+        display: flex;
+    }
+
+    .header-nav__menu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+    }
+
 }
 
-.header-nav__menu-item::after {
-    content: ">";
+.header-banner {
+    background: linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8) ), url(../img/baby-yoda.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-banner__h1 {
+    color: var(--accent-color);
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 * {
     margin: 0;
@@ -8,19 +8,21 @@
 
 
 :root {
-    font-family: 'Varela Round', sans-serif;
-    --main-text-color: rgb(47, 5, 5);
-    --accent-color: aqua;
+    --accent-color: #96c9d0;
+    --background-color: #96c9d0;
+    --border-color: #96c9d0;
+    --text-color: black;
+    color: var(--text-color);
+    font-family: 'DotGothic16', sans-serif;
+    scroll-behavior: smooth;
 }
 
-h1 {
-    color: var(--main-text-color);
-    font-family: 'Courier New', Courier, monospace;
+.container {
+    max-width: 1100px;
+    margin: auto;
 }
 
 img {
     display: block;
     width: 100%;
 }
-
-

@@ -1,3 +1,33 @@
-p::first-letter {
-    font-size: 2rem;
+.product-card {
+    border: 1px solid var(--border-color);
+    padding: 5px;
+}
+
+.product-card img {
+    display: block;
+    width: 80%;
+    margin: auto;
+    /* object-fit: cover; почитати в MDN для загального розвитку */
+}
+
+@media (min-width: 600px) {
+    
+    .main-products__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+    
+}
+
+@media (min-width: 800px) {
+    .main-products__list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 990px) {
+    .main-products__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
