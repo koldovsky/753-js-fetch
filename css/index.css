@@ -1,5 +1,5 @@
-@import url(common.css);
-@import url(controls.css);
-@import url(header.css);
-@import url(products.css);
-@import url(footer.css);
+@import "global.css";
+@import "controls.css";
+@import "header.css";
+@import "products.css";
+@import "footer.css";

@@ -6,23 +6,20 @@
     box-sizing: border-box;
 }
 
-
 :root {
-    --accent-color: #96c9d0;
-    --background-color: #96c9d0;
-    --border-color: #96c9d0;
-    --text-color: black;
-    color: var(--text-color);
+    --main-color: black;
+    --accent-color: #a6c7cf;
     font-family: 'DotGothic16', sans-serif;
+    color: var(--main-color);
     scroll-behavior: smooth;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
 }
 
 img {
     display: block;
     width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
