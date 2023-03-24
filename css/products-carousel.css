@@ -1,0 +1,9 @@
+.products__carousel {
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+}
+
+.products__carousel .carousel__slide {
+    display: flex;
+    justify-content: space-around;
+}
