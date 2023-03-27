@@ -101,22 +101,23 @@
         <div class="carousel__slide"></div>
         <button class="slide__next">⏭️</button>
       </div>
+      <input type="text" class="products__currency" value="USD">
+      <button class="products__convert">Convert</button>
       <div class="products__list"></div>
     </section>
   </main>
   <footer id="contacts" class="footer container">
     <h2>Contact <span class="ui-brand">Us</span></h2>
-    <form action="" class="footer__contacts">
-      <input type="text" name="name" placeholder="name" />
-      <input type="email" name="email" placeholder="email" />
-      <button class="button button-card">Submit</button>
-    </form>
+    <textarea class="contacts__message" id="" cols="30" rows="10"></textarea>
+    <button class="button button-card contacts__submit">Submit</button>
+    <div class="contacts__response"></div>
   </footer>
   <script src="js/title.js"></script>
   <script src="js/clock.js"></script>
   <script src="js/product-list.js"></script>
   <script src="js/products-carousel.js"></script>
   <script src="js/animated-carousel.js"></script>
+  <script src="js/chatgpt.js"></script>
 </body>
 
 </html>

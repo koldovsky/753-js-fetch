@@ -1,36 +1,14 @@
-(function(){
-    const products = [
-        {
-            id: '1',
-            title: 'Baby Yoda',
-            price: 10.99,
-            description: 'lorem ipsum...',
-            image: 'img/baby-yoda.svg'
-        },
-        {
-            id: '2',
-            title: 'Banana',
-            price: 9.99,
-            description: 'lorem ipsum...',
-            image: 'img/banana.svg'
-        },
-        {
-            id: '3',
-            title: 'Girl',
-            price: 12.99,
-            description: 'lorem ipsum...',
-            image: 'img/girl.svg'
-        },
-        {
-            id: '4',
-            title: 'Viking',
-            price: 13.99,
-            description: 'lorem ipsum...',
-            image: 'img/viking.svg'
-        },
-    ];
+(async function(){
 
-    function renderProducts(products) {
+    // fetch('api/products.json')
+    //   .then( response => response.json() )
+    //   .then( products => renderProducts(products) );
+    let currencies;
+    const response = await fetch('api/products.json');
+    const products = await response.json();
+    renderProducts(products, 1);
+
+    function renderProducts(products, rate) {
         const productsContainer = document.querySelector('.products__list');
         productsContainer.innerHTML = '';
         for (const product of products) {
@@ -46,7 +24,7 @@
                     Info
                 </button>
                 <button class="product-card__buttons-buy button button-card">
-                    Buy - ${product.price}
+                    Buy - ${(product.price * rate).toFixed(2)}
                 </button>
                 </div>
             </article>  
@@ -54,6 +32,18 @@
         }
     }
 
-    renderProducts(products);
+    const convertButton = document.querySelector('.products__convert');
+    convertButton.addEventListener('click', convertCurrency);
+
+    async function convertCurrency() {
+        if (!currencies) {
+            const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+            currencies = await response.json();
+        }
+        const currency = document.querySelector('.products__currency').value;
+        const rate = currencies.rates[currency];
+        renderProducts(products, rate);
+    }
+
 
 })();
