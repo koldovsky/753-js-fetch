@@ -101,16 +101,39 @@
         <div class="carousel__slide"></div>
         <button class="slide__next">⏭️</button>
       </div>
-      <input type="text" class="products__currency" value="USD">
+      <!-- <input type="text" class="products__currency" value="USD"> -->
+      <select class="products__currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="UAH">UAH</option>
+        <option value="PLN">PLN</option>
+      </select>
       <button class="products__convert">Convert</button>
       <div class="products__list"></div>
     </section>
   </main>
+
+  <section class="chat">
+    <h2>Chat</h2>
+    <input type="text" class="chat__text">
+    <button class="chat__button">Send</button>
+    <pre class="chat__response"></pre>
+  </section>
+
   <footer id="contacts" class="footer container">
     <h2>Contact <span class="ui-brand">Us</span></h2>
     <textarea class="contacts__message" id="" cols="30" rows="10"></textarea>
     <button class="button button-card contacts__submit">Submit</button>
     <div class="contacts__response"></div>
+    <form id="contact-form-formspree" action="https://formspree.io/f/xpzyvoez" method="POST">
+      <h3>Formspree</h3>
+      <label>Email:</label>
+      <input type="email" name="email" />
+      <label>Message:</label>
+      <input type="text" name="message" />
+      <button>Submit</button>
+    </form>
+    <div id="contact-form-status"></div>
   </footer>
   <script src="js/title.js"></script>
   <script src="js/clock.js"></script>
@@ -118,6 +141,8 @@
   <script src="js/products-carousel.js"></script>
   <script src="js/animated-carousel.js"></script>
   <script src="js/chatgpt.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/contact-form-formspree.js"></script>
 </body>
 
 </html>
