@@ -28,6 +28,7 @@ app.post('/api/chatgpt', async (req, res) => {
 
     // Set up the prompt and other parameters for the ChatGPT API request
     const data = {
+      model: "text-davinci-003",
       prompt: `User: ${message}\nAI: `,
       max_tokens: 50,
       n: 1,
